@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  level1:
+    build:
+      context: ./level1
+      dockerfile: Dockerfile
+    container_name: level1
+    networks:
+      - ctfnet
+    tty: true
+
+  level2:
+    build:
+      context: ./level2
+      dockerfile: Dockerfile
+    container_name: level2
+    networks:
+      - ctfnet
+    tty: true
+
+  level3:
+    build:
+      context: ./level3
+      dockerfile: Dockerfile
+    container_name: level3
+    networks:
+      - ctfnet
+    tty: true
+
+networks:
+  ctfnet:
+    driver: bridge

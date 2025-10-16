@@ -1,0 +1,20 @@
+LEVEL 2 - Network Discovery
+
+Great job reaching Level 2! Now find Level 3.
+
+DISCOVER LEVEL 3:
+1) Scan the Docker network to find other hosts:
+   nmap -sL ctfnet
+   
+   Alternative if nmap -sL doesn't work:
+   getent hosts level3
+   ping -c1 level3
+
+2) Get Level 3 credentials:
+   HINT: /root/level3_creds.txt
+
+3) SSH to Level 3:
+
+If prompted for host key verification, answer 'yes'.
+
+Level 3 contains the final challenge!

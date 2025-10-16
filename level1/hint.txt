@@ -1,0 +1,12 @@
+LEVEL 1 - Welcome!
+
+You found the first flag! Now proceed to Level 2.
+
+ACCESS LEVEL 2:
+1) From your host machine (after docker compose up -d):
+   ssh player@level2
+   Password: ctf2pass
+
+If prompted for host key verification, answer 'yes'.
+
+The Level 2 container is running SSH and waiting for your connection!

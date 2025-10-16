@@ -1,0 +1,17 @@
+LEVEL 3 - Final Challenge
+
+Congratulations! You've reached the final level.
+
+UNLOCK THE FINAL FLAG:
+1) You need the flags from Level 1 and Level 2 to proceed
+2) Run the unlock script:
+   ./unlock.sh
+   HINT: the basic user might not have Authorization 
+
+3) Enter the flags when prompted:
+   - Flag 1: from Level 1 (/home/ctf/flag.txt)
+   - Flag 2: from Level 2 (/home/player/flag.txt)
+
+The script will decrypt and reveal the final flag!
+
+Good luck!
