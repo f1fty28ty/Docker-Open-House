@@ -4,9 +4,7 @@ Great job reaching Level 2! Now find Level 3.
 
 DISCOVER LEVEL 3:
 1) Scan the Docker network to find other hosts:
-   nmap -sL ctfnet
-   
-   Alternative if nmap -sL doesn't work:
+
    getent hosts level3
    ping -c1 level3
 

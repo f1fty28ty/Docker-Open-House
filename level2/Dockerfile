@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install openssh-server, nmap, and useful tools
 RUN apt-get update && \
-    apt-get install -y openssh-server nmap sudo iputils-ping vim less && \
+    apt-get install -y openssh-server nmap sudo iputils-ping vim less bash-completion && \
     rm -rf /var/lib/apt/lists/*
 
 # Create ssh user 'player' with known password
@@ -13,6 +13,12 @@ RUN useradd -m -s /bin/bash player && \
     echo "player ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
     echo "player:ctf2pass" | chpasswd && \
     mkdir -p /var/run/sshd
+
+# Enable bash completion for the player user
+RUN echo 'if [ -f /usr/share/bash-completion/bash_completion ]; then' >> /home/player/.bashrc && \
+    echo '    . /usr/share/bash-completion/bash_completion' >> /home/player/.bashrc && \
+    echo 'fi' >> /home/player/.bashrc && \
+    chown player:player /home/player/.bashrc
 
 # Place flag and credentials
 RUN echo "flag{got_to_level2}" > /root/flag.txt && \
