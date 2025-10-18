@@ -15,7 +15,7 @@ RUN useradd -m -s /bin/bash player && \
     mkdir -p /var/run/sshd
 
 # Place flag and credentials
-RUN echo "flag{got_to_level2}" > /home/player/flag.txt && \
+RUN echo "flag{got_to_level2}" > /root/flag.txt && \
     echo "LEVEL3_CREDS: user=player3 password=ctf3pass" > /root/level3_creds.txt
 
 # Copy hint file
